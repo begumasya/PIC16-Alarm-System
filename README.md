@@ -24,6 +24,7 @@ Giriş Birimi: 3x4 Matrix Keypad ve Potansiyometre (ADC Girişi)
 Uyarı Birimi: Buzzer
 
 Görev Dağılımı
+
 Begüm Asya Eroğlu: Keypad tarama algoritması, şifreleme mantığı (Security Logic) ve LCD kullanıcı arayüzü tasarımı.
 
 Fırat Cem Başoğlu: ADC üzerinden mesafe hesaplama, PWM ile servo motor kontrolü ve sistemin Proteus simülasyonu.
