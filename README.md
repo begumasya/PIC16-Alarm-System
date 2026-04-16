@@ -1,6 +1,6 @@
 # PIC16-Alarm-System
 PIC16F877A Tabanlı Şifre Korumalı Akıllı Alarm ve Radar Sistemi
-Proje Tanımı
+Proje Tanımı;
 Bu proje, çevre güvenliğini sağlamak amacıyla tasarlanmış, radar tarama özellikli ve şifre korumalı bir akıllı alarm sistemidir. Sistem, mekanik tarama ile çevresel farkındalık sağlarken, tehdit algıladığında kullanıcı etkileşimi gerektiren bir güvenlik katmanı sunar.
 
 Çalışma Mantığı ve Özellikler
@@ -12,7 +12,8 @@ Alarm Durumu: Mesafe belirlenen eşik değerin (20 cm) altına düştüğünde; 
 
 Güvenlik ve Şifreleme: Sistemin tekrar aktif edilmesi için 3x4 Keypad üzerinden tanımlı şifrenin (1234) girilmesi gerekmektedir. Şifre doğrulandıktan sonra sistem güvenli mesafeye çıkılana kadar bekleyecek ve ardından radar moduna dönecektir.
 
-Teknik Bileşenler
+Teknik Bileşenler;
+
 Mikrodenetleyici: PIC16F877A
 
 Görsel Arayüz: 16x2 Karakter LCD ve Durum LED'leri
@@ -23,7 +24,7 @@ Giriş Birimi: 3x4 Matrix Keypad ve Potansiyometre (ADC Girişi)
 
 Uyarı Birimi: Buzzer
 
-Görev Dağılımı
+Görev Dağılımı;
 
 Begüm Asya Eroğlu: Keypad tarama algoritması, şifreleme mantığı (Security Logic) ve LCD kullanıcı arayüzü tasarımı.
 
