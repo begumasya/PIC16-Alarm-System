@@ -1,37 +1,23 @@
-# PIC16-Alarm-System
-PIC16F877A Tabanlı Şifre Korumalı Akıllı Alarm ve Radar Sistemi
-Proje Tanımı;
+Project Title:
+Smart Alarm System
 
-Bu proje, çevre güvenliğini sağlamak amacıyla tasarlanmış, radar tarama özellikli ve şifre korumalı bir akıllı alarm sistemidir. Sistem, mekanik tarama ile çevresel farkındalık sağlarken, tehdit algıladığında kullanıcı etkileşimi gerektiren bir güvenlik katmanı sunar.
+Objective:
+The aim of this project is to design and implement a physical circuit of an audible and visual smart alarm system using the PIC16F877A microcontroller. The system scans a 180-degree area and, if any object is detected within the scanned area, displays its distance on the LCD screen, illuminates a green LED, and continues scanning. If the object approaches closer than the predetermined distance, the alarm system is activated; the green LED turns off, the red LED turns on, the buzzer starts beeping, the system scanning stops, and the system locks itself. The alarm system remains active even when the object is moved away until the system password is entered via the keypad.
 
-Çalışma Mantığı ve Özellikler
-Radar Modu: Sistem, normal çalışma durumunda bir servo motor aracılığıyla sağa-sola sürekli tarama yaparak radar benzeri bir fonksiyon icra edecek ve sistemin aktif olduğunu yeşil LED ile belirtecektir.
+Module Distribution:
 
-Mesafe Simülasyonu: Gerçek sensör verisi yerine, potansiyometre üzerinden gelen analog sinyal ADC (Analog-Digital Converter) modülü ile okunarak mesafe bilgisine dönüştürülecektir.
+1. Distance Detection Module
+2. LCD Display Module
+3. Servo Motor Control Module
+4. Alarm Module (LED and buzzer)
+5. Keypad Security Module (optional)
 
-Alarm Durumu: Mesafe belirlenen eşik değerin (20 cm) altına düştüğünde; servo motor durdurulacak, kırmızı LED ve buzzer aktif edilecek, LCD ekranda şifre giriş ekranı görüntülenecektir.
+Hardware:
+The project will use the PIC16F877A microcontroller from the school’s experimental kits, and the system will be programmed using the CCS C language. The circuit design was tested and successfully implemented in Proteus using a potentiometer and a servo motor separately instead of a distance sensor. The goal is to convert this design into a physical circuit and implement it using a real distance sensor.
 
-Güvenlik ve Şifreleme: Sistemin tekrar aktif edilmesi için 3x4 Keypad üzerinden tanımlı şifrenin (1234) girilmesi gerekmektedir. Şifre doğrulandıktan sonra sistem güvenli mesafeye çıkılana kadar bekleyecek ve ardından radar moduna dönecektir.
+Workload Justification:
+This project includes multiple modules and functions such as circuit design in the Proteus environment, microcontroller programming, sensor data processing, scanning control with a servo motor, data display via LCD, alarm system implementation, and password authentication. Task distribution was carried out based on these functions.
 
-Teknik Bileşenler;
-
-Mikrodenetleyici: PIC16F877A
-
-Görsel Arayüz: 16x2 Karakter LCD ve Durum LED'leri
-
-Mekanik Birim: Servo Motor (PWM Kontrollü)
-
-Giriş Birimi: 3x4 Matrix Keypad ve Potansiyometre (ADC Girişi)
-
-Uyarı Birimi: Buzzer
-
-Görev Dağılımı;
-
-Begüm Asya Eroğlu: Keypad tarama algoritması, şifreleme mantığı (Security Logic) ve LCD kullanıcı arayüzü tasarımı.
-
-Fırat Cem Başoğlu: ADC üzerinden mesafe hesaplama, PWM ile servo motor kontrolü ve sistemin Proteus simülasyonu.
-
-Geliştirme Ortamı
-Yazılım: CCS C Compiler
-
-Simülasyon: Proteus 8 Professional
+Task Sharing:
+Begüm Asya EROĞLU: Development of Proteus circuit design, distance sensing, and LCD display modules.
+Fırat Cem BAŞOĞLU: Development of servo motor control, alarm system (LED + buzzer), and keypad password authentication system.
